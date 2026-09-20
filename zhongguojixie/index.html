@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="中国机械设备行业门户网站，提供工业机械、建筑机械、农业机械、数控机床等设备选型指南、技术参数、行业资讯及供应商查询服务。">
+    <meta name="keywords" content="中国机械设备, 工业设备, 数控机床, 建筑机械, 农业机械, 设备采购, 工业制造">
+    <title>中国机械设备-工业设备选型与技术采购指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #0056b3;
+            --secondary-color: #004494;
+            --accent-color: #f0ad4e;
+            --text-main: #333333;
+            --text-light: #666666;
+            --bg-light: #f8f9fa;
+            --border-color: #e0e0e0;
+            --white: #ffffff;
+            --spacing-unit: 16px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            color: var(--text-main);
+            line-height: 1.6;
+            background-color: var(--white);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: var(--primary-color);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Utility Classes */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 24px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--primary-color);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .section-title a {
+            font-size: 14px;
+            color: var(--text-light);
+            font-weight: normal;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--white);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .header-top {
+            background-color: var(--bg-light);
+            font-size: 12px;
+            color: var(--text-light);
+            padding: 8px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .header-top .container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .main-header {
+            padding: 20px 0;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+        }
+
+        .logo span {
+            color: var(--text-main);
+            font-size: 16px;
+            font-weight: 400;
+            margin-left: 10px;
+        }
+
+        .search-bar {
+            display: flex;
+            margin-top: 10px;
+        }
+
+        .search-bar input {
+            padding: 10px 15px;
+            border: 1px solid var(--border-color);
+            border-right: none;
+            border-radius: 4px 0 0 4px;
+            width: 60%;
+            outline: none;
+        }
+
+        .search-bar button {
+            padding: 10px 25px;
+            background-color: var(--primary-color);
+            color: var(--white);
+            border: none;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .search-bar button:hover {
+            background-color: var(--secondary-color);
+        }
+
+        /* Navigation */
+        nav {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        nav ul {
+            display: flex;
+        }
+
+        nav li {
+            position: relative;
+        }
+
+        nav a {
+            display: block;
+            padding: 15px 20px;
+            font-weight: 500;
+            font-size: 15px;
+        }
+
+        nav a:hover, nav a.active {
+            background-color: var(--secondary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #f0f4f8 0%, #d9e2ec 100%);
+            padding: 40px 0;
+            margin-bottom: 30px;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: var(--text-main);
+        }
+
+        .hero-text p {
+            font-size: 16px;
+            color: var(--text-light);
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+
+        .hero-tags {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background-color: var(--white);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            color: var(--primary-color);
+            border: 1px solid var(--primary-color);
+        }
+
+        .hero-image {
+            background-color: #e9ecef;
+            height: 350px;
+            border-radius: 8px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Categories Grid */
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .category-card {
+            background: var(--white);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-color: var(--primary-color);
+        }
+
+        .category-icon {
+            font-size: 32px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .category-name {
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        /* Featured Section */
+        .featured-section {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .device-card {
+            display: flex;
+            background: var(--white);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            transition: box-shadow 0.3s;
+        }
+
+        .device-card:hover {
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .device-img {
+            width: 240px;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .device-info {
+            padding: 20px;
+            flex: 1;
+        }
+
+        .device-info h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .device-meta {
+            font-size: 13px;
+            color: var(--text-light);
+            margin-bottom: 10px;
+        }
+
+        .device-desc {
+            font-size: 14px;
+            color: var(--text-main);
+            margin-bottom: 15px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .device-price {
+            font-size: 16px;
+            color: #d9534f;
+            font-weight: 700;
+            float: right;
+        }
+
+        /* Sidebar */
+        .sidebar-widget {
+            background: var(--white);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+
+        .widget-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--bg-light);
+        }
+
+        .rank-list li {
+            display: flex;
+            align-items: baseline;
+            padding: 10px 0;
+            border-bottom: 1px dashed var(--border-color);
+        }
+
+        .rank-list li:last-child {
+            border-bottom: none;
+        }
+
+        .rank-num {
+            width: 20px;
+            height: 20px;
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-align: center;
+            line-height: 20px;
+            font-size: 12px;
+            border-radius: 50%;
+            margin-right: 10px;
+            flex-shrink: 0;
+        }
+
+        .rank-list li:nth-child(1) .rank-num { background-color: #ff4d4f; }
+        .rank-list li:nth-child(2) .rank-num { background-color: #ff7a45; }
+        .rank-list li:nth-child(3) .rank-num { background-color: #ffc53d; }
+
+        .rank-name {
+            font-size: 14px;
+            color: var(--text-main);
+        }
+
+        .rank-info {
+            font-size: 12px;
+            color: var(--text-light);
+            margin-left: auto;
+        }
+
+        /* Industry News */
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .news-card {
+            background: var(--white);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 15px;
+        }
+
+        .news-date {
+            font-size: 12px;
+            color: var(--text-light);
+            margin-bottom: 8px;
+        }
+
+        .news-title {
+            font-size: 15px;
+            font-weight: 600;
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+
+        .news-title a:hover {
+            color: var(--primary-color);
+            text-decoration: underline;
+        }
+
+        /* Guide Section */
+        .guide-section {
+            background-color: var(--bg-light);
+            padding: 40px 0;
+            margin-bottom: 40px;
+        }
+
+        .guide-steps {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .guide-steps::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background-color: var(--border-color);
+            z-index: 0;
+        }
+
+        .step-item {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            width: 25%;
+        }
+
+        .step-icon {
+            width: 80px;
+            height: 80px;
+            background-color: var(--white);
+            border: 2px solid var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            font-size: 24px;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        .step-title {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .step-desc {
+            font-size: 13px;
+            color: var(--text-light);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: #bdc3c7;
+            padding: 50px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--white);
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            font-size: 13px;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .featured-section {
+                grid-template-columns: 1fr;
+            }
+            .news-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-top { display: none; }
+            .hero-content {
+                grid-template-columns: 1fr;
+            }
+            .hero-image {
+                height: 250px;
+            }
+            nav ul {
+                flex-wrap: wrap;
+            }
+            nav a {
+                padding: 10px 15px;
+                font-size: 14px;
+            }
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <div class="header-top">
+        <div class="container">
+            <span>欢迎访问中国机械设备行业门户网站，为您提供专业的设备选型与采购服务。</span>
+            <span>
+                <a href="#">登录</a> | <a href="#">注册</a> | <a href="#">企业入驻</a>
+            </span>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="container">
+            <a href="#" class="logo">
+                <span>CHINA</span>机械网
+            </a>
+            <div class="search-bar">
+                <input type="text" placeholder="搜索设备型号、品牌或供应商...">
+                <button type="button">搜索</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#" class="active">首页</a></li>
+                <li><a href="#">工业机床</a></li>
+                <li><a href="#">建筑机械</a></li>
+                <li><a href="#">农业机械</a></li>
+                <li><a href="#">起重运输</a></li>
+                <li><a href="#">环保设备</a></li>
+                <li><a href="#">行业资讯</a></li>
+                <li><a href="#">设备招标</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>中国机械设备行业一站式采购平台</h1>
+                    <p>汇聚国内外优质工业设备供应商，涵盖数控机床、工程机械、矿山机械等全品类。提供设备参数、价格对比、厂家直销及行业深度分析，助您高效完成工业设备采购决策。</p>
+                    <div class="hero-tags">
+                        <span class="tag">数控机床</span>
+                        <span class="tag">挖掘机</span>
+                        <span class="tag">装载机</span>
+                        <span class="tag">农业收割机</span>
+                        <span class="tag">工业机器人</span>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://picsum.photos/seed/machinery/600/400" alt="现代化工业生产线">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="container">
+        
+        <!-- Category Grid -->
+        <section class="categories-section">
+            <div class="section-title">
+                <span>设备分类导航</span>
+                <a href="#">查看全部 &raquo;</a>
+            </div>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <span class="category-icon">⚙️</span>
+                    <div class="category-name">数控机床</div>
+                </div>
+                <div class="category-card">
+                    <span class="category-icon">🏗️</span>
+                    <div class="category-name">工程机械</div>
+                </div>
+                <div class="category-card">
+                    <span class="category-icon">🚜</span>
+                    <div class="category-name">农业机械</div>
+                </div>
+                <div class="category-card">
+                    <span class="category-icon">🏭</span>
+                    <div class="category-name">矿山机械</div>
+                </div>
+                <div class="category-card">
+                    <span class="category-icon">🚢</span>
+                    <div class="category-name">起重运输</div>
+                </div>
+                <div class="category-card">
+                    <span class="category-icon">⚡</span>
+                    <div class="category-name">电力设备</div>
+                </div>
+                <div class="category-card">
+                    <span class="category-icon">🧪</span>
+                    <div class="category-name">环保设备</div>
+                </div>
+                <div class="category-card">
+                    <span class="category-icon">🤖</span>
+                    <div class="category-name">工业机器人</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content Area -->
+        <div class="featured-section">
+            
+            <!-- Left Column: Device Listings -->
+            <div class="content-column">
+                <div class="section-title">
+                    <span>最新设备供应</span>
+                    <a href="#">供应大厅 &raquo;</a>
+                </div>
+
+                <!-- Device Card 1 -->
+                <article class="device-card">
+                    <img src="https://picsum.photos/seed/cnc/240/180" alt="五轴联动数控机床" class="device-img">
+                    <div class="device-info">
+                        <h3><a href="#">五轴联动高速精雕数控机床</a></h3>
+                        <div class="device-meta">厂家：华东数控技术 | 更新：2023-10-24</div>
+                        <p class="device-desc">适用于复杂曲面加工，主轴转速30000rpm，加工精度±0.002mm。全新进口导轨，长期保修，支持定制化加工方案。</p>
+                        <div class="device-price">¥ 1,280,000 起</div>
+                    </div>
+                </article>
+
+                <!-- Device Card 2 -->
+                <article class="device-card">
+                    <img src="https://picsum.photos/seed/excavator/240/180" alt="液压挖掘机" class="device-img">
+                    <div class="device-info">
+                        <h3><a href="#">大马力液压挖掘机 320型</a></h3>
+                        <div class="device-meta">厂家：三一重工 | 更新：2023-10-23</div>
+                        <p class="device-desc">斗容1.6m³，额定功率180kW，燃油消耗低，驾驶室宽敞舒适，配备原厂质保服务，现货供应。</p>
+                        <div class="device-price">¥ 680,000 起</div>
+                    </div>
+                </article>
+
+                <!-- Device Card 3 -->
+                <article class="device-card">
+                    <img src="https://picsum.photos/seed/lathe/240/180" alt="卧式车床" class="device-img">
+                    <div class="device-info">
+                        <h3><a href="#">全功能数控卧式车床 CK6140</a></h3>
+                        <div class="device-meta">厂家：沈阳机床 | 更新：2023-10-22</div>
+                        <p class="device-desc">加工直径400mm，长度1000mm，具备自动对刀和C轴功能，适合精密零件批量生产。</p>
+                        <div class="device-price">¥ 320,000 起</div>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- Right Column: Sidebar -->
+            <aside class="sidebar">
+                
+                <!-- Hot Brands -->
+                <div class="sidebar-widget">
+                    <h4 class="widget-title">热门品牌</h4>
+                    <div class="rank-list">
+                        <li>
+                            <span class="rank-num">1</span>
+                            <span class="rank-name">三一重工</span>
+                            <span class="rank-info">2.3万次浏览</span>
+                        </li>
+                        <li>
+                            <span class="rank-num">2</span>
+                            <span class="rank-name">徐工集团</span>
+                            <span class="rank-info">1.8万次浏览</span>
+                        </li>
+                        <li>
+                            <span class="rank-num">3</span>
+                            <span class="rank-name">中联重科</span>
+                            <span class="rank-info">1.5万次浏览</span>
+                        </li>
+                        <li>
+                            <span class="rank-num">4</span>
+                            <span class="rank-name">沈阳机床</span>
+                            <span class="rank-info">1.2万次浏览</span>
+                        </li>
+                        <li>
+                            <span class="rank-num">5</span>
+                            <span class="rank-name">大连机床</span>
+                            <span class="rank-info">9800次浏览</span>
+                        </li>
+                    </div>
+                </div>
+
+                <!-- Industry News -->
+                <div class="sidebar-widget">
+                    <h4 class="widget-title">行业资讯</h4>
+                    <div class="news-list">
+                        <article style="margin-bottom:15px; border-bottom:1px solid #eee; padding-bottom:10px;">
+                            <div class="news-date">2023-10-25</div>
+                            <div class="news-title"><a href="#">中国制造业数字化转型加速，设备智能化成趋势</a></div>
+                        </article>
+                        <article style="margin-bottom:15px; border-bottom:1px solid #eee; padding-bottom:10px;">
+                            <div class="news-date">2023-10-24</div>
+                            <div class="news-title"><a href="#">国家出台政策支持高端装备制造业发展</a></div>
+                        </article>
+                        <article>
+                            <div class="news-date">2023-10-23</div>
+                            <div class="news-title"><a href="#">三季度全球机床市场报告：中国份额持续提升</a></div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- Ad Placeholder -->
+                <div class="sidebar-widget" style="text-align:center; background:#f4f4f4; padding:40px 0;">
+                    <div style="color:#999; font-size:12px;">广告位招租</div>
+                    <div style="color:#ccc; font-size:12px;">高端设备采购咨询</div>
+                </div>
+
+            </aside>
+        </div>
+
+        <!-- Industry News Grid -->
+        <section class="news-section">
+            <div class="section-title">
+                <span>行业动态</span>
+            </div>
+            <div class="news-grid">
+                <article class="news-card">
+                    <div class="news-date">2023-10-24</div>
+                    <h3 class="news-title"><a href="#">工信部发布2023年工业重点行业节能降碳指南</a></h3>
+                    <p style="font-size:13px; color:#666;">为推动工业领域绿色低碳发展，工信部近日发布了多项重点行业节能降碳技术改造指南，鼓励企业更新...</p>
+                </article>
+                <article class="news-card">
+                    <div class="news-date">2023-10-23</div>
+                    <h3 class="news-title"><a href="#">国产数控系统取得重大突破，性能对标国际一流</a></h3>
+                    <p style="font-size:13px; color:#666;">国内某知名科研机构成功研发出新型高端数控系统，在插补精度和响应速度上已达到国际先进水平...</p>
+                </article>
+                <article class="news-card">
+                    <div class="news-date">2023-10-22</div>
+                    <h3 class="news-title"><a href="#">工程机械租赁市场回暖，租赁率同比增长15%</a></h3>
+                    <p style="font-size:13px; color:#666;">随着基建项目的陆续开工，工程机械租赁市场需求旺盛，设备周转率明显提升，租赁企业收益向好...</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- How to Buy Guide -->
+        <section class="guide-section">
+            <div class="container">
+                <div class="section-title" style="justify-content:center; border:none;">设备采购全流程指南</div>
+                <div class="guide-steps">
+                    <div class="step-item">
+                        <div class="step-icon">1</div>
+                        <div class="step-title">需求分析</div>
+                        <div class="step-desc">明确设备用途、规格及技术指标</div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-icon">2</div>
+                        <div class="step-title">品牌筛选</div>
+                        <div class="step-desc">对比主流品牌与口碑评价</div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-icon">3</div>
+                        <div class="step-title">在线询价</div>
+                        <div class="step-desc">提交需求，获取多家供应商报价</div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-icon">4</div>
+                        <div class="step-title">实地验货</div>
+                        <div class="step-desc">确认设备状态，签订采购合同</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于中国机械网</h4>
+                    <p style="font-size:13px; line-height:1.8; margin-bottom:15px;">
+                        中国机械网是国内领先的工业设备B2B交易平台，致力于为制造商、采购商提供高效的设备交易与信息服务。我们连接供需，助力中国制造业升级。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>热门分类</h4>
+                    <ul>
+                        <li><a href="#">数控机床</a></li>
+                        <li><a href="#">工程机械</a></li>
+                        <li><a href="#">农业机械</a></li>
+                        <li><a href="#">矿山机械</a></li>
+                        <li><a href="#">起重设备</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>服务支持</h4>
+                    <ul>
+                        <li><a href="#">会员注册</a></li>
+                        <li><a href="#">企业认证</a></li>
+                        <li><a href="#">广告服务</a></li>
+                        <li><a href="#">帮助中心</a></li>
+                        <li><a href="#">联系方式</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系我们</h4>
+                    <ul>
+                        <li>电话：400-123-4567</li>
+                        <li>邮箱：service@chinamachine.com</li>
+                        <li>地址：北京市海淀区工业路88号</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 中国机械网 版权所有 | ICP备12345678号</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+                  </html>
