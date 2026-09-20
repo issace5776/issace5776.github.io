@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>全美最孤独的公路 - 荒野公路旅行指南与路线规划</title>
+    <meta name="description" content="探索美国最孤独的公路，从著名的阿拉斯加的冰原公路到蒙大拿的落基山脉公路。本站提供详细的路线规划、驾驶指南、沿途景点推荐及自驾注意事项，助您体验极致的荒野之旅。">
+    <meta name="keywords" content="全美最孤独的公路, 美国公路旅行, 冰原公路, 落基山脉自驾, 美国荒野公路">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #d35400;
+            --text-color: #333;
+            --text-light: #666;
+            --bg-light: #f9f9f9;
+            --bg-white: #ffffff;
+            --border-radius: 8px;
+            --container-width: 1200px;
+            --spacing-unit: 1rem;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-light);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--bg-white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-color);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent-color);
+        }
+
+        .cta-button {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .cta-button:hover {
+            background-color: #ba4a00;
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 600px;
+            background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)), url('https://picsum.photos/seed/roadhero/1920/1080.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-bottom: 3rem;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-content p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+        }
+
+        /* Section Styling */
+        section {
+            padding: 4rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.2rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: var(--text-light);
+        }
+
+        /* Featured Route Card */
+        .route-card {
+            background: var(--bg-white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            margin-bottom: 3rem;
+        }
+
+        .route-image {
+            height: 100%;
+            min-height: 400px;
+        }
+
+        .route-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .route-info {
+            padding: 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .route-tag {
+            display: inline-block;
+            background-color: #e8f0fe;
+            color: #1967d2;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            width: fit-content;
+            margin-bottom: 1rem;
+        }
+
+        .route-info h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .route-info p {
+            color: var(--text-light);
+            margin-bottom: 2rem;
+        }
+
+        .route-stats {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            border-top: 1px solid #eee;
+            padding-top: 1.5rem;
+        }
+
+        .stat-item strong {
+            display: block;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .stat-item span {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        /* Grid Layout for Routes */
+        .routes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .route-card-small {
+            background: var(--bg-white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .route-card-small:hover {
+            transform: translateY(-5px);
+        }
+
+        .route-card-small img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .route-card-small-content {
+            padding: 1.5rem;
+        }
+
+        .route-card-small h4 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        .route-card-small p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+
+        .route-link {
+            color: var(--accent-color);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        /* Guide Section */
+        .guide-section {
+            background-color: var(--bg-white);
+        }
+
+        .guide-list {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .guide-item {
+            display: flex;
+            gap: 2rem;
+            align-items: flex-start;
+        }
+
+        .guide-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: #f0f0f0;
+            line-height: 1;
+            min-width: 60px;
+        }
+
+        .guide-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        .guide-content p {
+            color: var(--text-light);
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background-color: #f4f4f4;
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 2rem;
+        }
+
+        .faq-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+        }
+
+        .faq-item h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        .faq-item p {
+            font-size: 0.95rem;
+            color: var(--text-light);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-col h4 {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-col a {
+            color: #bdc3c7;
+        }
+
+        .footer-col a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #95a5a6;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+            
+            .route-card {
+                grid-template-columns: 1fr;
+            }
+            
+            .route-image {
+                min-height: 250px;
+            }
+            
+            .route-info {
+                padding: 1.5rem;
+            }
+            
+            .nav-wrapper {
+                flex-direction: column;
+                height: auto;
+                padding: 1rem 0;
+            }
+            
+            nav ul {
+                margin-top: 1rem;
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+            
+            .cta-button {
+                width: 100%;
+                text-align: center;
+            }
+            
+            .route-stats {
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+            
+            .faq-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <span>★</span> 孤独公路指南
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#featured" class="active">精选路线</a></li>
+                    <li><a href="#all-routes">全部路线</a></li>
+                    <li><a href="#guide">驾驶指南</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <a href="#guide" class="cta-button">开始规划</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-content">
+                <h1>全美最孤独的公路</h1>
+                <p>远离喧嚣，深入荒野。探索美国最令人敬畏的孤立公路，体验真正的天地辽阔。</p>
+                <a href="#featured" class="cta-button" style="padding: 12px 30px; font-size: 1.1rem;">探索路线</a>
+            </div>
+        </section>
+
+        <section id="featured" class="container">
+            <div class="section-title">
+                <h2>年度首选：冰原公路</h2>
+                <p>阿拉斯加州的极致体验</p>
+            </div>
+
+            <div class="route-card">
+                <div class="route-image">
+                    <img src="https://picsum.photos/seed/aliens/800/800.jpg" alt="冰原公路风光">
+                </div>
+                <div class="route-info">
+                    <span class="route-tag">阿拉斯加</span>
+                    <h3>冰原公路</h3>
+                    <p>全长560英里，蜿蜒穿过北极圈内的广阔苔原。这里没有城市的灯光，只有极昼的阳光和极夜的星光。这是世界上最孤独的公路之一，也是野生动物爱好者的天堂。</p>
+                    <div class="route-stats">
+                        <div class="stat-item">
+                            <strong>560</strong>
+                            <span>英里</span>
+                        </div>
+                        <div class="stat-item">
+                            <strong>北极圈</strong>
+                            <span>穿越</span>
+                        </div>
+                        <div class="stat-item">
+                            <strong>极昼</strong>
+                            <span>体验</span>
+                        </div>
+                    </div>
+                    <a href="#" class="cta-button">查看详细攻略</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="all-routes" class="container">
+            <div class="section-title">
+                <h2>更多孤独公路推荐</h2>
+                <p>从落基山脉到太平洋海岸，总有一段路适合你</p>
+            </div>
+
+            <div class="routes-grid">
+                <article class="route-card-small">
+                    <img src="https://picsum.photos/seed/montana/400/300.jpg" alt="落基山脉公路">
+                    <div class="route-card-small-content">
+                        <h4>落基山脉公路</h4>
+                        <p>蒙大拿州与爱达荷州交界处，穿越波尔德高原，感受巍峨的雪山与深邃的峡谷。</p>
+                        <a href="#" class="route-link">查看详情 &rarr;</a>
+                    </div>
+                </article>
+
+                <article class="route-card-small">
+                    <img src="https://picsum.photos/seed/mojave/400/300.jpg" alt="莫哈韦公路">
+                    <div class="route-card-small-content">
+                        <h4>莫哈韦沙漠公路</h4>
+                        <p>加州内华达沙漠地带，干燥、炎热、寂静。这里是电影《公路之王》的取景地。</p>
+                        <a href="#" class="route-link">查看详情 &rarr;</a>
+                    </div>
+                </article>
+
+                <article class="route-card-small">
+                    <img src="https://picsum.photos/seed/panamericana/400/300.jpg" alt="泛美公路">
+                    <div class="route-card-small-content">
+                        <h4>太平洋景观道</h4>
+                        <p>连接加州与华盛顿州的沿海公路，紧贴太平洋海岸线，看尽壮阔的海景与悬崖。</p>
+                        <a href="#" class="route-link">查看详情 &rarr;</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="guide" class="guide-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>孤独公路驾驶指南</h2>
+                    <p>在荒野中安全行走的实用建议</p>
+                </div>
+
+                <div class="guide-list">
+                    <div class="guide-item">
+                        <div class="guide-number">01</div>
+                        <div class="guide-content">
+                            <h3>车辆准备与应急物资</h3>
+                            <p>在偏远地区，车辆故障可能是致命的。出发前务必检查轮胎、刹车和油箱。随车携带充足的水、高热量食物、急救包、手电筒以及应急卫星通讯设备（如Garmin inReach）。切勿依赖手机信号。</p>
+                        </div>
+                    </div>
+
+                    <div class="guide-item">
+                        <div class="guide-number">02</div>
+                        <div class="guide-content">
+                            <h3>了解天气与季节限制</h3>
+                            <p>美国内陆地区的天气变化极快。例如冰原公路在冬季通常因暴雪而关闭。务必提前查询国家公园管理局（NPS）和当地交通部门的路况信息。夏季虽好，但蚊虫和熊类活动也较为频繁。</p>
+                        </div>
+                    </div>
+
+                    <div class="guide-item">
+                        <div class="guide-number">03</div>
+                        <div class="guide-content">
+                            <h3>野生动物安全</h3>
+                            <p>孤独公路往往意味着野生动物的领地。在驾驶时，切勿为了拍照而突然急刹或下车。遇到熊、驼鹿等大型动物时，保持安全距离，切勿投喂或挑衅。如果遇到狼群，切勿奔跑，保持镇定。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="faq-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>常见问题解答</h2>
+                </div>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h4>全美最孤独的公路是哪一条？</h4>
+                        <p>通常公认的是阿拉斯加的冰原公路。它穿越北极圈，沿途几乎没有人类定居点，只有苔原和野生动物。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>自驾需要什么驾照？</h4>
+                        <p>中国驾照可以在美国自驾，但通常需要配合英文翻译件或国际驾照（IDP）使用。建议提前了解具体州的法律要求。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>这些公路有手机信号吗？</h4>
+                        <p>绝大多数孤独公路路段完全无信号。因此，提前下载离线地图并携带卫星通讯设备至关重要。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>最佳旅行时间是什么时候？</h4>
+                        <p>夏季（6月至8月）是大多数公路的开放时间。冰原公路虽然夏季开放，但需防备突发暴风雪。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <ul>
+                        <li><a href="#">关于孤独公路指南</a></li>
+                        <li><a href="#">编辑团队</a></li>
+                        <li><a href="#">联系合作</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>路线分类</h4>
+                    <ul>
+                        <li><a href="#">阿拉斯加路线</a></li>
+                        <li><a href="#">西部荒野</a></li>
+                        <li><a href="#">西南沙漠</a></li>
+                        <li><a href="#">东北森林</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>实用工具</h4>
+                    <ul>
+                        <li><a href="#">租车指南</a></li>
+                        <li><a href="#">保险说明</a></li>
+                        <li><a href="#">天气查询</a></li>
+                        <li><a href="#">紧急救援</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 孤独公路指南. 保留所有权利. 本站内容仅供参考，出行请以实时路况为准.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
