@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="大年三十必备菜大全，提供经典年夜饭菜单推荐、传统吉祥菜谱做法、食材选购技巧及年夜饭摆盘设计指南。">
+    <meta name="keywords" content="大年三十必备菜,年夜饭菜单,年夜菜谱,吉祥菜,传统年夜饭">
+    <title>大年三十必备菜-经典年夜饭菜单与吉祥菜谱大全</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-red: #C8102E;
+            --secondary-red: #E63946;
+            --gold: #D4AF37;
+            --bg-cream: #FFF8F0;
+            --text-dark: #2C2C2C;
+            --text-gray: #666666;
+            --white: #FFFFFF;
+            --border-radius: 8px;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            background-color: var(--bg-cream);
+            color: var(--text-dark);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Utility */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            font-size: 2.2rem;
+            color: var(--primary-red);
+            margin-bottom: 10px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: var(--gold);
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        .section-title p {
+            color: var(--text-gray);
+            font-size: 1.1rem;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-red);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--text-dark);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-dark);
+            font-size: 1rem;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-red);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://picsum.photos/seed/foodfeast/1920/600') no-repeat center center/cover;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            padding: 0 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero-content p {
+            font-size: 1.25rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-red);
+            color: var(--white);
+            box-shadow: 0 4px 15px rgba(200, 16, 46, 0.4);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--secondary-red);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--white);
+            color: var(--white);
+            margin-left: 10px;
+        }
+
+        .btn-outline:hover {
+            background-color: var(--white);
+            color: var(--primary-red);
+        }
+
+        /* Quick Access Grid */
+        .quick-access {
+            padding: 40px 0;
+            background-color: var(--white);
+        }
+
+        .grid-4 {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .access-card {
+            text-align: center;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            transition: transform 0.3s;
+            cursor: pointer;
+            border: 1px solid #eee;
+        }
+
+        .access-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+            border-color: var(--primary-red);
+        }
+
+        .access-icon {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .access-card h3 {
+            font-size: 1.1rem;
+            color: var(--text-dark);
+        }
+
+        /* Menu Section */
+        .menu-section {
+            padding: 80px 0;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .recipe-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s;
+        }
+
+        .recipe-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .recipe-img {
+            height: 200px;
+            background-color: #ddd;
+            position: relative;
+        }
+        
+        .recipe-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .recipe-tag {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: var(--gold);
+            color: #fff;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        .recipe-content {
+            padding: 20px;
+        }
+
+        .recipe-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 8px;
+            color: var(--text-dark);
+        }
+
+        .recipe-content .origin {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .recipe-content p {
+            font-size: 0.95rem;
+            color: #555;
+            margin-bottom: 15px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .recipe-link {
+            color: var(--primary-red);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            font-size: 0.95rem;
+        }
+
+        .recipe-link::after {
+            content: '→';
+            margin-left: 5px;
+            transition: margin-left 0.2s;
+        }
+
+        .recipe-link:hover::after {
+            margin-left: 10px;
+        }
+
+        /* Guide Section */
+        .guide-section {
+            padding: 80px 0;
+            background-color: #FFF;
+        }
+
+        .guide-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .guide-text h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+
+        .guide-text p {
+            margin-bottom: 15px;
+            color: var(--text-gray);
+            text-align: justify;
+        }
+
+        .checklist {
+            margin-top: 20px;
+        }
+
+        .checklist li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            color: var(--text-dark);
+        }
+
+        .checklist li::before {
+            content: '✓';
+            color: var(--primary-red);
+            font-weight: bold;
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
+        .guide-image img {
+            width: 100%;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            padding: 80px 0;
+            background-color: var(--bg-cream);
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        details {
+            background-color: var(--white);
+            margin-bottom: 15px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+            overflow: hidden;
+        }
+
+        summary {
+            padding: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--text-dark);
+            list-style: none;
+            position: relative;
+            padding-right: 40px;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        summary::after {
+            content: '+';
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.5rem;
+            color: var(--primary-red);
+            font-weight: 300;
+        }
+
+        details[open] summary::after {
+            content: '-';
+        }
+
+        .faq-answer {
+            padding: 0 20px 20px 20px;
+            color: var(--text-gray);
+            border-top: 1px solid #f0f0f0;
+            padding-top: 15px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a1a1a;
+            color: #ccc;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--primary-red);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+            
+            .nav-wrapper {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+            }
+
+            nav ul {
+                margin-top: 15px;
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .grid-4 {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .guide-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .grid-4 {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero {
+                height: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#C8102E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M2 17L12 22L22 17" stroke="#C8102E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M2 12L12 17L22 12" stroke="#C8102E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>年味食谱</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#menu">经典菜谱</a></li>
+                    <li><a href="#guide">备菜指南</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>大年三十必备菜</h1>
+                <p>传承传统，辞旧迎新。精选年夜饭吉祥菜谱，助您打造一场丰盛团圆宴。</p>
+                <div>
+                    <a href="#menu" class="btn btn-primary">浏览菜谱</a>
+                    <a href="#guide" class="btn btn-outline">备菜攻略</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Access -->
+        <section class="quick-access">
+            <div class="container">
+                <div class="grid-4">
+                    <div class="access-card">
+                        <span class="access-icon">🥟</span>
+                        <h3>饺子</h3>
+                    </div>
+                    <div class="access-card">
+                        <span class="access-icon">🐟</span>
+                        <h3>年年有余</h3>
+                    </div>
+                    <div class="access-card">
+                        <span class="access-icon">🥩</span>
+                        <h3>红烧肉</h3>
+                    </div>
+                    <div class="access-card">
+                        <span class="access-icon">🥬</span>
+                        <h3>四喜丸子</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Section -->
+        <section id="menu" class="menu-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>经典年夜饭菜单推荐</h2>
+                    <p>每一道菜都蕴含着美好的寓意，是年夜饭桌上的主角</p>
+                </div>
+                
+                <div class="menu-grid">
+                    <!-- Dish 1 -->
+                    <article class="recipe-card">
+                        <div class="recipe-img">
+                            <img src="https://picsum.photos/seed/dumpling/400/300" alt="北方饺子">
+                            <span class="recipe-tag">主食</span>
+                        </div>
+                        <div class="recipe-content">
+                            <h3>白菜猪肉饺子</h3>
+                            <span class="origin">北方传统 · 辞旧迎新</span>
+                            <p>饺子形如元宝，寓意招财进宝。白菜谐音“百财”，搭配鲜嫩猪肉，是北方大年三十必不可少的压轴主食。</p>
+                            <a href="#" class="recipe-link">查看做法</a>
+                        </div>
+                    </article>
+
+                    <!-- Dish 2 -->
+                    <article class="recipe-card">
+                        <div class="recipe-img">
+                            <img src="https://picsum.photos/seed/fish/400/300" alt="红烧鱼">
+                            <span class="recipe-tag">硬菜</span>
+                        </div>
+                        <div class="recipe-content">
+                            <h3>红烧鲤鱼</h3>
+                            <span class="origin">经典家常 · 年年有余</span>
+                            <p>年夜饭必有鱼，且不可吃完。鲤鱼寓意“年年有余”，红烧色泽红亮，寓意生活红火。</p>
+                            <a href="#" class="recipe-link">查看做法</a>
+                        </div>
+                    </article>
+
+                    <!-- Dish 3 -->
+                    <article class="recipe-card">
+                        <div class="recipe-img">
+                            <img src="https://picsum.photos/seed/ribs/400/300" alt="红烧肉">
+                            <span class="recipe-tag">硬菜</span>
+                        </div>
+                        <div class="recipe-content">
+                            <h3>东坡红烧肉</h3>
+                            <span class="origin">传统名菜 · 富贵吉祥</span>
+                            <p>肥而不腻，入口即化。五花肉层层分明，色泽金黄，象征着日子越过越红火，是全家人的最爱。</p>
+                            <a href="#" class="recipe-link">查看做法</a>
+                        </div>
+                    </article>
+
+                    <!-- Dish 4 -->
+                    <article class="recipe-card">
+                        <div class="recipe-img">
+                            <img src="https://picsum.photos/seed/balls/400/300" alt="四喜丸子">
+                            <span class="recipe-tag">经典</span>
+                        </div>
+                        <div class="recipe-content">
+                            <h3>四喜丸子</h3>
+                            <span class="origin">鲁菜经典 · 四季发财</span>
+                            <p>大丸子象征团团圆圆，四喜寓意福、禄、寿、喜。外焦里嫩，汤汁浓郁，是宴客的最高礼遇。</p>
+                            <a href="#" class="recipe-link">查看做法</a>
+                        </div>
+                    </article>
+                    
+                    <!-- Dish 5 -->
+                    <article class="recipe-card">
+                        <div class="recipe-img">
+                            <img src="https://picsum.photos/seed/turkey/400/300" alt="整鸡">
+                            <span class="recipe-tag">硬菜</span>
+                        </div>
+                        <div class="recipe-content">
+                            <h3>清蒸整鸡</h3>
+                            <span class="origin">南方习俗 · 大吉大利</span>
+                            <p>整鸡代表“大吉大利”，清蒸能最大程度保留鸡肉的鲜美和营养。摆盘时鸡头朝向贵客，表示尊重。</p>
+                            <a href="#" class="recipe-link">查看做法</a>
+                        </div>
+                    </article>
+
+                    <!-- Dish 6 -->
+                    <article class="recipe-card">
+                        <div class="recipe-img">
+                            <img src="https://picsum.photos/seed/noodles/400/300" alt="长寿面">
+                            <span class="recipe-tag">主食</span>
+                        </div>
+                        <div class="recipe-content">
+                            <h3>长寿面</h3>
+                            <span class="origin">传统习俗 · 长寿健康</span>
+                            <p>面条细长，寓意长寿。大年三十吃面，祈愿长辈健康长寿，全家人福寿绵长。</p>
+                            <a href="#" class="recipe-link">查看做法</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Guide Section -->
+        <section id="guide" class="guide-section">
+            <div class="container">
+                <div class="guide-layout">
+                    <div class="guide-image">
+                        <img src="https://picsum.photos/seed/foodprep/600/400" alt="备菜准备">
+                    </div>
+                    <div class="guide-text">
+                        <h2>大年三十备菜全攻略</h2>
+                        <p>年夜饭讲究的是“年年有余”和“团团圆圆”，提前做好充分的准备能让节日更加轻松愉快。</p>
+                        <p>建议在大年三十中午或下午就开始备菜。将需要长时间炖煮的肉类（如红烧肉、四喜丸子）提前烹饪至七成熟，年夜饭前再进行收汁和最后装盘，这样不仅节省时间，还能保证菜肴的最佳口感。</p>
+                        <ul class="checklist">
+                            <li>提前清洗食材，特别是绿叶蔬菜，避免烹饪时出水过多。</li>
+                            <li>提前调好酱汁，炒菜时直接倒入，减少操作时间。</li>
+                            <li>准备充足的餐具和调料，避免临时手忙脚乱。</li>
+                            <li>留出30分钟以上的烹饪时间，应对突发情况。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="faq-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>年夜饭常见问题</h2>
+                    <p>关于大年三十必备菜的常见疑问解答</p>
+                </div>
+                <div class="faq-container">
+                    <details>
+                        <summary>年夜饭为什么一定要有鱼？</summary>
+                        <div class="faq-answer">
+                            <p>在中国传统文化中，鱼与“余”谐音，寓意“年年有余”，象征着财富和丰收。此外，鱼也是宴席上的常见食材，味道鲜美，深受大众喜爱。</p>
+                        </div>
+                    </details>
+                    <details>
+                        <summary>北方年夜饭南方有区别吗？</summary>
+                        <div class="faq-answer">
+                            <p>确实存在差异。北方年夜饭多以饺子为主，讲究“守岁”；南方则更注重丰盛的冷盘和热菜，如整鸡、整鸭、海鲜等，寓意大吉大利、飞黄腾达。</p>
+                        </div>
+                    </details>
+                    <details>
+                        <summary>如何安排年夜饭的菜量？</summary>
+                        <div class="faq-answer">
+                            <p>一般建议准备比预计人数多20%的菜量。既要保证每道菜都有剩余，避免“吃光”的寓意，又要防止准备过多造成浪费。冷菜和热菜的比例约为3:7。</p>
+                        </div>
+                    </details>
+                    <details>
+                        <summary>年夜饭有哪些不能做的菜？</summary>
+                        <div class="faq-answer">
+                            <p>虽然各地习俗不同，但通常避免吃“梨”（分离）和“豆腐”（太干或谐音不好），以及散碎的食物。选择寓意吉祥、圆满的菜品是关键。</p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>年味食谱</h4>
+                    <p style="font-size: 0.9rem; line-height: 1.8;">专注分享传统美食文化与家常做法，让每一个节日都充满家的味道。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>热门分类</h4>
+                    <ul>
+                        <li><a href="#">春节习俗</a></li>
+                        <li><a href="#">饺子大全</a></li>
+                        <li><a href="#">硬菜推荐</a></li>
+                        <li><a href="#">甜品点心</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="#">关于我们</a></li>
+                        <li><a href="#">食谱投稿</a></li>
+                        <li><a href="#">免责声明</a></li>
+                        <li><a href="#">联系合作</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 年味食谱网. All Rights Reserved. </p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
