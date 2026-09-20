@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="玛拉顿 - 经典魔兽世界副本攻略指南。提供玛拉顿详细副本机制解析、BOSS技能攻略、最优路线规划及掉落物品查询。">
+    <meta name="keywords" content="玛拉顿, 魔兽世界副本, 经典副本, 玛拉顿攻略, 老玩家回忆">
+    <title>玛拉顿 - 经典魔兽世界副本攻略与路线指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #1a1a1a;
+            --accent-color: #ff9900;
+            --text-main: #333333;
+            --text-light: #666666;
+            --bg-body: #f4f4f4;
+            --bg-card: #ffffff;
+            --border-radius: 8px;
+            --spacing-unit: 16px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: var(--accent-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        nav a {
+            font-size: 0.95rem;
+            color: #ddd;
+        }
+
+        nav a:hover, nav a.active {
+            color: white;
+            border-bottom: 2px solid var(--accent-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://picsum.photos/seed/mara/1200/600');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #e68a00;
+            transform: translateY(-2px);
+        }
+
+        /* Stats Bar */
+        .stats-bar {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1.5rem 0;
+            margin-top: -30px;
+            position: relative;
+            z-index: 10;
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-size: 2rem;
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-item p {
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+
+        /* Main Content */
+        main {
+            padding: 3rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .section-title h2 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: var(--accent-color);
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        /* Route Section */
+        .route-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .route-card {
+            background: var(--bg-card);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .route-card h3 {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .route-steps {
+            list-style: none;
+            counter-reset: route-counter;
+        }
+
+        .route-steps li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+            color: var(--text-light);
+        }
+
+        .route-steps li::before {
+            counter-increment: route-counter;
+            content: counter(route-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 24px;
+            height: 24px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 24px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        /* Boss Section */
+        .boss-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .boss-card {
+            background: var(--bg-card);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: transform 0.2s;
+        }
+
+        .boss-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .boss-image {
+            width: 100%;
+            height: 180px;
+            background-color: #ddd;
+            object-fit: cover;
+        }
+
+        .boss-info {
+            padding: 1rem;
+        }
+
+        .boss-info h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .boss-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-bottom: 0.5rem;
+        }
+
+        .tag {
+            font-size: 0.75rem;
+            padding: 2px 8px;
+            border-radius: 4px;
+            background-color: #eee;
+            color: #555;
+        }
+
+        .tag.difficulty-high { background-color: #ffebee; color: #c62828; }
+        .tag.difficulty-med { background-color: #fff3e0; color: #ef6c00; }
+
+        /* Loot Table */
+        .loot-container {
+            background: var(--bg-card);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .loot-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        .loot-table th, .loot-table td {
+            text-align: left;
+            padding: 12px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .loot-table th {
+            background-color: #f9f9f9;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .loot-table tr:hover {
+            background-color: #fafafa;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background-color: white;
+            padding: 3rem 0;
+            margin-top: 3rem;
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 2rem;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #eee;
+            padding-bottom: 1rem;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .faq-answer {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: #999;
+            padding: 2rem 0;
+            text-align: center;
+            font-size: 0.9rem;
+            margin-top: 3rem;
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            nav {
+                display: none; /* Simplify for mobile example */
+            }
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+            .faq-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <div class="logo">
+                <span>◆</span> 玛拉顿攻略
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#route">副本路线</a></li>
+                    <li><a href="#boss">BOSS攻略</a></li>
+                    <li><a href="#loot">掉落查询</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>玛拉顿</h1>
+            <p>经典魔兽世界副本——碧水仙踪园。探索隐藏在荆棘谷深处的古老遗迹，挑战双Boss机制，获取传奇装备。</p>
+            <a href="#route" class="btn">开始副本攻略</a>
+        </div>
+    </section>
+
+    <div class="container">
+        <section class="stats-bar">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>2</h3>
+                    <p>主要BOSS</p>
+                </div>
+                <div class="stat-item">
+                    <h3>5</h3>
+                    <p>精英怪物</p>
+                </div>
+                <div class="stat-item">
+                    <h3>LV 45-50</h3>
+                    <p>推荐等级</p>
+                </div>
+                <div class="stat-item">
+                    <h3>5</h3>
+                    <p>最大玩家数</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <main class="container">
+        <div class="section-title" id="route">
+            <h2>经典副本路线</h2>
+            <p>玛拉顿作为经典的5人副本，拥有复杂的迷宫结构和独特的“双Boss”机制。</p>
+        </div>
+
+        <div class="route-grid">
+            <div class="route-card">
+                <h3>📍 首层入口与先祖遗迹</h3>
+                <ul class="route-steps">
+                    <li>从荆棘谷进入副本，初始区域较为开阔。</li>
+                    <li>清理沿途的小怪，注意避开视野盲区。</li>
+                    <li>前往中心平台，面对第一波精英怪。</li>
+                </ul>
+            </div>
+            <div class="route-card">
+                <h3>🧭 迷宫与暗礁</h3>
+                <ul class="route-steps">
+                    <li>进入地下迷宫区域，这里光线昏暗。</li>
+                    <li>利用拉绳索机制通过障碍，小心陷阱。</li>
+                    <li>绕过暗礁区域，准备迎接Boss战。</li>
+                </ul>
+            </div>
+            <div class="route-card">
+                <h3>⚔️ 遗忘者庭院与终局</h3>
+                <ul class="route-steps">
+                    <li>清理遗忘者庭院的小怪。</li>
+                    <li>到达最终区域，面对两位Boss：加尔鲁什·地狱咆哮与奥蕾莉亚·风行者。</li>
+                    <li>完成副本，拾取掉落奖励。</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section-title" id="boss" style="margin-top: 4rem;">
+            <h2>BOSS 攻略</h2>
+        </div>
+
+        <div class="boss-grid">
+            <article class="boss-card">
+                <img src="https://picsum.photos/seed/garrosh/400/250" alt="加尔鲁什·地狱咆哮" class="boss-image">
+                <div class="boss-info">
+                    <h3>加尔鲁什·地狱咆哮</h3>
+                    <div class="boss-tags">
+                        <span class="tag difficulty-high">高难度</span>
+                        <span class="tag">物理输出</span>
+                    </div>
+                    <p>拥有强大的物理攻击力，会施放致死打击。关键在于打断其施法并保持距离。</p>
+                </div>
+            </article>
+
+            <article class="boss-card">
+                <img src="https://picsum.photos/seed/alya/400/250" alt="奥蕾莉亚·风行者" class="boss-image">
+                <div class="boss-info">
+                    <h3>奥蕾莉亚·风行者</h3>
+                    <div class="boss-tags">
+                        <span class="tag difficulty-high">高难度</span>
+                        <span class="tag">远程/风筝</span>
+                    </div>
+                    <p>使用弓箭进行远程攻击，会释放箭雨。需要坦克将Boss拉出区域，防止箭雨覆盖全队。</p>
+                </div>
+            </article>
+
+            <article class="boss-card">
+                <img src="https://picsum.photos/seed/jammal/400/250" alt="祖尔格拉布" class="boss-image">
+                <div class="boss-info">
+                    <h3>祖尔格拉布 (小Boss)</h3>
+                    <div class="boss-tags">
+                        <span class="tag difficulty-med">中等难度</span>
+                        <span class="tag">精英</span>
+                    </div>
+                    <p>位于入口附近，需要配合治疗，注意其毒液伤害。</p>
+                </div>
+            </article>
+        </div>
+
+        <div class="section-title" id="loot" style="margin-top: 4rem;">
+            <h2>珍贵掉落</h2>
+            <p>玛拉顿是许多玩家获取绿色套装和紫色武器的来源。</p>
+        </div>
+
+        <div class="loot-container">
+            <table class="loot-table">
+                <thead>
+                    <tr>
+                        <th>物品名称</th>
+                        <th>部位</th>
+                        <th>掉落来源</th>
+                        <th>备注</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>奥蕾莉亚的迅捷之刃</td>
+                        <td>武器</td>
+                        <td>奥蕾莉亚·风行者</td>
+                        <td>远程物理输出首选</td>
+                    </tr>
+                    <tr>
+                        <td>龙鳞护腿</td>
+                        <td>腿部</td>
+                        <td>加尔鲁什·地狱咆哮</td>
+                        <td>德鲁伊经典装备</td>
+                    </tr>
+                    <tr>
+                        <td>奥术新星护腿</td>
+                        <td>腿部</td>
+                        <td>加尔鲁什·地狱咆哮</td>
+                        <td>法师热门选择</td>
+                    </tr>
+                    <tr>
+                        <td>狂暴者的护符</td>
+                        <td>饰品</td>
+                        <td>加尔鲁什·地狱咆哮</td>
+                        <td>增加攻击速度</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>常见问题 (FAQ)</h2>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">玛拉顿需要几个人组队？</div>
+                    <div class="faq-answer">玛拉顿是一个标准的5人副本，建议由5名玩家组队挑战，以应对复杂的机制和BOSS战。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">进入玛拉顿的等级要求是多少？</div>
+                    <div class="faq-answer">建议等级在45级以上，特别是为了应对奥蕾莉亚的强力攻击，45级是相对舒适的进入等级。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">玛拉顿是固定掉落吗？</div>
+                    <div class="faq-answer">大部分装备为随机掉落，但奥蕾莉亚的迅捷之刃有较高的固定掉落率。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">副本中是否有特殊的机制？</div>
+                    <div class="faq-answer">是的，副本中包含拉绳索和平台跳跃机制，需要玩家具备一定的操作技巧。</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 玛拉顿攻略网 - 致敬经典魔兽世界</p>
+            <p>本站内容仅供玩家交流与学习，所有游戏素材归暴雪娱乐所有。</p>
+        </div>
+    </footer>
+
+</body>
+  </html>
